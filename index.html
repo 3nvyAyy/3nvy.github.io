@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Create a clean, downloadable freelance invoice in minutes." />
+  <title>InvoiceKit — Free invoice maker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header"><a class="logo" href="#top">Invoice<span>Kit</span></a><nav><a href="#maker">Make an invoice</a><a href="#how">How it works</a></nav></header>
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">FREE • NO SIGN-UP</p><h1>Send an invoice that gets you paid.</h1><p class="lede">Make a polished freelance invoice, download it as a PDF, and get back to work.</p><a class="button" href="#maker">Create my invoice <span>→</span></a><p class="quiet">Free forever. Your details stay in your browser.</p>
+    </section>
+    <section id="maker" class="maker" aria-label="Invoice maker">
+      <div class="form-panel">
+        <div class="panel-heading"><p class="eyebrow">INVOICE MAKER</p><h2>Your details</h2></div>
+        <form id="invoice-form">
+          <label>Business or your name<input id="fromName" value="Alex Morgan" /></label>
+          <label>Email or website<input id="fromContact" value="alex@example.com" /></label>
+          <label>Client name<input id="toName" placeholder="e.g. Acme Studio" /></label>
+          <div class="split"><label>Invoice #<input id="number" value="001" /></label><label>Due date<input id="due" type="date" /></label></div>
+          <label>What did you do?<input id="service" value="Design services" /></label>
+          <div class="split"><label>Quantity<input id="quantity" type="number" min="0" step="0.01" value="1" /></label><label>Rate ($)<input id="rate" type="number" min="0" step="0.01" value="500" /></label></div>
+          <label>Note (optional)<textarea id="note" rows="3" placeholder="Thanks for your business!"></textarea></label>
+        </form>
+      </div>
+      <div class="preview-wrap"><div class="invoice" id="invoice">
+        <div class="invoice-top"><div><div class="invoice-logo">Invoice<span>Kit</span></div><p id="p-from-name">Alex Morgan</p><p id="p-from-contact">alex@example.com</p></div><div class="invoice-meta"><b>INVOICE</b><p>Invoice #<span id="p-number">001</span></p><p>Due <span id="p-due">—</span></p></div></div>
+        <div class="bill"><p class="label">BILL TO</p><h3 id="p-to-name">Your client</h3></div>
+        <table><thead><tr><th>DESCRIPTION</th><th>QTY</th><th>RATE</th><th>AMOUNT</th></tr></thead><tbody><tr><td id="p-service">Design services</td><td id="p-quantity">1</td><td id="p-rate">$500.00</td><td id="p-amount">$500.00</td></tr></tbody></table>
+        <div class="total"><span>TOTAL DUE</span><strong id="p-total">$500.00</strong></div><p id="p-note" class="invoice-note">Thanks for your business!</p><footer>Made with InvoiceKit</footer>
+      </div><button class="button print" onclick="window.print()">Download / print PDF <span>↓</span></button></div>
+    </section>
+    <section id="how" class="how"><p class="eyebrow">SIMPLE BY DESIGN</p><h2>From project to payment in three steps.</h2><div class="steps"><article><span>01</span><h3>Add the basics</h3><p>Enter your name, client, service and rate.</p></article><article><span>02</span><h3>Review your invoice</h3><p>Your professional invoice updates as you type.</p></article><article><span>03</span><h3>Download and send</h3><p>Save as PDF and email it to your client.</p></article></div></section>
+    <section class="upgrade"><div><p class="eyebrow">READY FOR MORE?</p><h2>Want a complete freelance business kit?</h2><p>Get premium invoice styles, proposal templates, and a client tracker.</p></div><a href="https://gumroad.com" target="_blank" rel="noopener" class="button light">Explore the kit →</a></section>
+  </main><footer class="site-footer"><a class="logo" href="#top">Invoice<span>Kit</span></a><p>Free tools for independent work.</p></footer><script src="app.js"></script>
+</body></html>
